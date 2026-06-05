@@ -1,4 +1,4 @@
-import { page1 } from "../page1";
+import { page1 } from "../Page1";
 import { Page1DetailA } from "../Page1DetailA";
 import { Page1DetailB } from "../Page1DetailB";
 
