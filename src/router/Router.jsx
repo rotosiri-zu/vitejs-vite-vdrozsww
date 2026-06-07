@@ -6,7 +6,7 @@ import { page2Routes } from "./Page2Routes"
 export const Router = () => {
     return (
         <switch>
-        <Route exact path="/">
+          <Route exact path="/">
             <Home />
           </Route>
           <Route path="/page1" render={({ match: { url } }) => ( 
@@ -21,8 +21,9 @@ export const Router = () => {
                     </Route>
                 })}
             </switch>
-          )} />
-         <Route path="/page2" render={({ match: { url } }) => ( 
+          )} 
+        />
+        <Route path="/page2" render={({ match: { url } }) => ( 
             <switch>
                 {page2Routes.map((route) => {
                     <Route 
@@ -34,7 +35,11 @@ export const Router = () => {
                     </Route>
                 })}
             </switch>
-          )} />
+          )}   
+        />
+        <Route path="*">
+            <page404 />
+        </Route>
         </switch>
     )
 }
